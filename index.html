@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-Snap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="section section-1">
+        <form action="">
+          <label for="normal" class="normal">
+            <input type="radio" name="stop" id="normal" checked />
+            Normal
+          </label>
+          <label for="always" class="always">
+            <input type="radio" name="stop" id="always" />
+            Always
+          </label>
+        </form>
+        <div class="image-list">
+          <div class="image-list-item">
+            <img
+              src="./images/pexels-benjamin-suter-3617500.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="image-list-item">
+            <img
+              src="./images/pexels-james-wheeler-417074.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="image-list-item">
+            <img src="./images/pexels-pixabay-210186.jpg" alt="" srcset="" />
+          </div>
+          <div class="image-list-item">
+            <img
+              src="./images/pexels-ricardo-esquivel-1586298.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="image-list-item">
+            <img
+              src="./images/pexels-todd-trapani-2754200.jpg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="section section-2">
+        <h2>Section 2</h2>
+      </section>
+      <section class="section section-3">
+        <h2>Section 3</h2>
+      </section>
+      <section class="section section-4">
+        <h2>Section 4</h2>
+      </section>
+      <section class="section section-5">
+        <h2>Section 5</h2>
+      </section>
+    </main>
+    <script type="text/javascript" language="javaScript">
+      let inputNormal = document.querySelector('input[id="normal"]');
+      let inputAlways = document.querySelector('input[id="always"]');
+
+      inputNormal.addEventListener("click", function () {
+        document
+          .querySelector(".image-list-item")
+          .style.setProperty("--stop", "normal");
+      });
+
+      inputAlways.addEventListener("click", function () {
+        document
+          .querySelector(".image-list-item")
+          .style.setProperty("--stop", "always");
+      });
+    </script>
+  </body>
+</html>
